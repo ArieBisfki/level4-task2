@@ -1,4 +1,4 @@
-package com.example.level4task2
+package com.example.madlevel4task2
 
 import org.junit.Test
 

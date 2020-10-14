@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Level4Task2</string>
+    <string name="app_name">MADLevel4Task2</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -7,6 +7,13 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="fragment_game_header">Welcome</string>
+    <string name="fragment_game_instructions">Instructions: select rock, paper or scissors to play</string>
+    <string name="fragment_game_statistics_title">Your all time statistics</string>
+    <string name="fragment_game_statistics">Win: %1$d  Draw: %2$d  Lose: %3$d</string>
+    <string name="fragment_game_win_text">You win!</string>
+    <string name="fragment_game_versus">V.S.</string>
+    <string name="fragment_game_computer">Computer</string>
+    <string name="fragment_game_player">You</string>
 </resources>
