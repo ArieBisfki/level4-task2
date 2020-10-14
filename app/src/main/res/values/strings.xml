@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">MADLevel4Task2</string>
+    <string name="app_name">Mad Level 4 Task 2</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -16,4 +15,6 @@
     <string name="fragment_game_versus">V.S.</string>
     <string name="fragment_game_computer">Computer</string>
     <string name="fragment_game_player">You</string>
+    <string name="fragment_game_toolbar_title">Mad Level 4 Task 2</string>
+    <string name="fragment_history_toolbar_title">Your Game History</string>
 </resources>
