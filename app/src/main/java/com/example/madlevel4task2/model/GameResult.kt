@@ -1,4 +1,4 @@
-package com.example.madlevel4task2
+package com.example.madlevel4task2.model
 
 enum class GameResult(val winningText: String) {
     WIN_COMPUTER("Computer wins!"),

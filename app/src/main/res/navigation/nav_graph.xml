@@ -6,7 +6,7 @@
     app:startDestination="@id/gameFragment">
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.example.madlevel4task2.GameFragment"
+        android:name="com.example.madlevel4task2.ui.GameFragment"
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.madlevel4task2.HistoryFragment"
+        android:name="com.example.madlevel4task2.ui.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" >
         <action

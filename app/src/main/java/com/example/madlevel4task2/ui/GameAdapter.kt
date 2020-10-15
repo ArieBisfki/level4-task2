@@ -1,9 +1,11 @@
-package com.example.madlevel4task2
+package com.example.madlevel4task2.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.madlevel4task2.model.Game
+import com.example.madlevel4task2.R
 import com.example.madlevel4task2.databinding.ReusableGameSummaryBinding
 
 class GameAdapter(private val games: List<Game>): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
@@ -18,7 +20,7 @@ class GameAdapter(private val games: List<Game>): RecyclerView.Adapter<GameAdapt
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ViewHolder(
             layoutInflater.inflate(R.layout.item_game, parent, false)

@@ -1,9 +1,8 @@
-package com.example.madlevel4task2
+package com.example.madlevel4task2.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import com.example.madlevel4task2.R
 
 class MainActivity : AppCompatActivity() {
 

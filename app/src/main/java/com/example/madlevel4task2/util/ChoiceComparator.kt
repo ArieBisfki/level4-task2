@@ -1,4 +1,6 @@
-package com.example.madlevel4task2
+package com.example.madlevel4task2.util
+
+import com.example.madlevel4task2.model.Choice
 
 class ChoiceComparator private constructor() : Comparator<Choice> {
     override fun compare(o1: Choice, o2: Choice): Int {

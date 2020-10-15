@@ -1,4 +1,6 @@
-package com.example.madlevel4task2
+package com.example.madlevel4task2.model
+
+import com.example.madlevel4task2.R
 
 enum class Choice(val drawable: Int) {
     ROCK(R.drawable.rock),
