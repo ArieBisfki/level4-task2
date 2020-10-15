@@ -63,71 +63,11 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="@string/fragment_game_win_text"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_versus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/iv_choice_player"
-        android:layout_width="@dimen/fragment_game_middle_image_width"
-        android:layout_height="@dimen/fragment_game_middle_image_width"
-        android:background="@color/colorPrimaryDark"
-        android:src="@drawable/scissors"
+    <include layout="@layout/reusable_game_summary"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_versus"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_versus"
-        android:layout_width="@dimen/fragment_game_middle_image_width"
-        android:layout_height="@dimen/fragment_game_middle_image_width"
-        android:gravity="center"
-        android:text="@string/fragment_game_versus"
-        android:textSize="30sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/iv_choice_player"
-        app:layout_constraintStart_toEndOf="@+id/iv_choice_computer"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/iv_choice_computer"
-        android:layout_width="@dimen/fragment_game_middle_image_width"
-        android:layout_height="@dimen/fragment_game_middle_image_width"
-        android:background="@color/colorPrimaryDark"
-        android:src="@drawable/paper"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_versus"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_title_computer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/fragment_game_computer"
-        app:layout_constraintEnd_toEndOf="@+id/iv_choice_computer"
-        app:layout_constraintStart_toStartOf="@+id/iv_choice_computer"
-        app:layout_constraintTop_toBottomOf="@+id/iv_choice_computer" />
-
-    <TextView
-        android:id="@+id/tv_title_player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/fragment_game_player"
-        app:layout_constraintEnd_toEndOf="@+id/iv_choice_player"
-        app:layout_constraintStart_toStartOf="@+id/iv_choice_player"
-        app:layout_constraintTop_toBottomOf="@+id/iv_choice_player" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:id="@+id/btn_rock"

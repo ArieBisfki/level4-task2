@@ -11,9 +11,9 @@
     <string name="fragment_game_instructions">Instructions: select rock, paper or scissors to play</string>
     <string name="fragment_game_statistics_title">Your all time statistics</string>
     <string name="fragment_game_statistics">Win: %1$d  Draw: %2$d  Lose: %3$d</string>
-    <string name="fragment_game_win_text">You win!</string>
-    <string name="fragment_game_versus">V.S.</string>
-    <string name="fragment_game_computer">Computer</string>
+    <string name="reusable_game_summary_win_text">You win!</string>
+    <string name="reusable_game_summary_versus">V.S.</string>
+    <string name="reusable_game_summary_computer">Computer</string>
     <string name="fragment_game_player">You</string>
     <string name="fragment_game_toolbar_title">Mad Level 4 Task 2</string>
     <string name="fragment_history_toolbar_title">Your Game History</string>

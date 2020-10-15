@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/reusable_game_summary_win_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Date placeholder"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result" />
+
+    <ImageView
+        android:id="@+id/iv_choice_player"
+        android:layout_width="@dimen/reusable_game_summary_image_width"
+        android:layout_height="@dimen/reusable_game_summary_image_width"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/scissors"
+        android:layout_marginTop="@dimen/reusable_game_summary_image_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_versus"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_versus"
+        android:layout_width="@dimen/reusable_game_summary_image_width"
+        android:layout_height="@dimen/reusable_game_summary_image_width"
+        android:gravity="center"
+        android:text="@string/reusable_game_summary_versus"
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_choice_player"
+        app:layout_constraintStart_toEndOf="@+id/iv_choice_computer"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <ImageView
+        android:id="@+id/iv_choice_computer"
+        android:layout_width="@dimen/reusable_game_summary_image_width"
+        android:layout_height="@dimen/reusable_game_summary_image_width"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/paper"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_versus"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_title_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/reusable_game_summary_computer"
+        app:layout_constraintEnd_toEndOf="@+id/iv_choice_computer"
+        app:layout_constraintStart_toStartOf="@+id/iv_choice_computer"
+        app:layout_constraintTop_toBottomOf="@+id/iv_choice_computer" />
+
+    <TextView
+        android:id="@+id/tv_title_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/fragment_game_player"
+        app:layout_constraintEnd_toEndOf="@+id/iv_choice_player"
+        app:layout_constraintStart_toStartOf="@+id/iv_choice_player"
+        app:layout_constraintTop_toBottomOf="@+id/iv_choice_player" />
+</androidx.constraintlayout.widget.ConstraintLayout>
