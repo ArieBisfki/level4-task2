@@ -6,18 +6,11 @@ import com.example.madlevel4task2.database.GameRoomDatabase
 import com.example.madlevel4task2.model.Game
 
 class GameRepository(context: Context) {
-    private var gameDao: GameDao
-
-    init {
-        val reminderRoomDatabase = GameRoomDatabase.getDatabase(context)
-        gameDao = reminderRoomDatabase!!.gameDao()
-    }
+    private var gameDao = GameRoomDatabase.getDatabase(context)!!.gameDao()
 
     suspend fun getAllGames(): List<Game> = gameDao.getAllGames()
 
-    suspend fun insertGame(reminder: Game) = gameDao.insertGame(reminder)
+    suspend fun insertGame(game: Game) = gameDao.insertGame(game)
 
-    suspend fun deleteGame(reminder: Game) = gameDao.deleteGame(reminder)
-
-    suspend fun updateGame(reminder: Game) = gameDao.updateGame(reminder)
+    suspend fun deleteAllGames() = gameDao.deleteAllGames()
 }

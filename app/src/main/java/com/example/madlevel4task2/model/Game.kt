@@ -6,11 +6,13 @@ import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.example.madlevel4task2.util.ChoiceComparator
 import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.util.*
 
 @Entity(tableName = "game")
 class Game(
     @ColumnInfo(name = "datePlayed")
-    val datePlayed: String,
+    val datePlayed: Date,
 
     @ColumnInfo(name = "computerChoice")
     val computerChoice: Choice,
@@ -33,5 +35,10 @@ class Game(
                 throw Exception("Computer/player choice comparison returned unexpected result.")
             }
         }
+    }
+
+    @delegate:Ignore
+    val datePlayedString: String by lazy {
+        SimpleDateFormat("EEE MMM d HH:mm:ss ZZZZ y", Locale.ENGLISH).format(datePlayed)
     }
 }

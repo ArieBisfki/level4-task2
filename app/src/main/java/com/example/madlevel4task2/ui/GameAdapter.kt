@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.madlevel4task2.model.Game
 import com.example.madlevel4task2.R
 import com.example.madlevel4task2.databinding.ReusableGameSummaryBinding
+import java.text.DateFormat
+import java.util.*
 
 class GameAdapter(private val games: List<Game>): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -14,9 +16,9 @@ class GameAdapter(private val games: List<Game>): RecyclerView.Adapter<GameAdapt
 
         fun databind(game: Game) {
             binding.tvResult.text = game.result.winningText
-            binding.tvDate.text = game.datePlayed
-            binding.ivChoiceComputer.setImageResource(game.computerChoice.drawable)
-            binding.ivChoicePlayer.setImageResource(game.playerChoice.drawable)
+            binding.tvDate.text = game.datePlayedString
+            binding.ivChoiceComputer.setImageResource(game.computerChoice.imageResource)
+            binding.ivChoicePlayer.setImageResource(game.playerChoice.imageResource)
         }
     }
 

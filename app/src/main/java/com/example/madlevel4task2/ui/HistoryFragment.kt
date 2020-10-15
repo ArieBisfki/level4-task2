@@ -61,7 +61,7 @@ class HistoryFragment : Fragment() {
             it.addItemDecoration(itemDecoration)
         }
 
-        // Get reminders from the database
+        // Get games from the database
         CoroutineScope(Dispatchers.Main).launch {
             val games = withContext(Dispatchers.IO) {
                 gameRepository.getAllGames()
@@ -69,7 +69,6 @@ class HistoryFragment : Fragment() {
             this@HistoryFragment.games.clear()
             this@HistoryFragment.games.addAll(games)
             gameAdapter.notifyDataSetChanged()
-
         }
 
         return binding.root
@@ -82,7 +81,11 @@ class HistoryFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_delete -> {
-                println("deleted")
+                CoroutineScope(Dispatchers.IO).launch {
+                    gameRepository.deleteAllGames()
+                }
+                games.clear()
+                gameAdapter.notifyDataSetChanged()
             }
             else -> findNavController().popBackStack()
         }
